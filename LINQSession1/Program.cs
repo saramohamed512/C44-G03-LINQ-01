@@ -22,6 +22,14 @@
             #endregion
 
             #endregion
+            #region Extension Method
+            //int x = 12345;
+            ////Console.WriteLine(IntExtention.Reverse(x));
+            //int y=x.Reverse();
+            //Console.WriteLine(y);
+
+
+            #endregion
         }
     }
 }
