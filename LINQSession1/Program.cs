@@ -47,11 +47,39 @@
             //Console.WriteLine(Emp05.GetType().Name);
             #endregion
             #region LINQ
-            List<int> Numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10};
-            List<int> OddNums = Numbers.Where(N  => N%2==1).ToList();
-            foreach (int n in OddNums) { 
-                Console.WriteLine(n);
-            }
+            //List<int> Numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10};
+            //List<int> OddNums = Numbers.Where(N  => N%2==1).ToList();
+            //foreach (int n in OddNums) { 
+            //    Console.WriteLine(n);
+            //}
+            #endregion
+            #region LINQ Syntax
+            #region Fluent Syntax
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //1.Call LINQ Operator as Static Method
+            //var OddNums = Enumerable.Where(Numbers, N => N % 2 == 1);
+            //foreach (int n in OddNums)
+            //{
+            //    Console.WriteLine(n);
+            //}
+            //2.Call LINQ Operator as Extention Method
+            //var OddNums = Numbers.Where(N => N % 2 == 1);
+            //foreach (int n in OddNums)
+            //{
+            //    Console.WriteLine(n);
+            //}
+            #endregion
+            #region Query Syntax
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var OddNums=from N in Numbers
+            //            where N%2==1
+            //            select N;
+            //foreach (int n in OddNums)
+            //{
+            //    Console.WriteLine(n);
+            //}
+
+            #endregion
             #endregion
         }
     }
