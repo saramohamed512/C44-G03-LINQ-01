@@ -1,4 +1,6 @@
-﻿namespace LINQSession1
+﻿using LINQSession1.Data;
+
+namespace LINQSession1
 {
     internal class Program
     {
@@ -102,6 +104,11 @@
             //    Console.WriteLine(n);
             //}
             //Casting , Aggregate , Elements Operators
+            #endregion
+            #region Data Setup
+            Console.WriteLine(ListGenerator.ProductList[0]);
+            Console.WriteLine(ListGenerator.CustomerList[0]);
+
             #endregion
         }
     }
