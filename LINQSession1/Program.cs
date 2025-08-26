@@ -180,6 +180,80 @@ namespace LINQSession1
             //}
             #endregion
 
+
+            #endregion
+            #region Transformation (projection) Operators
+            #region Get Product Name
+            //var Result = ListGenerator.ProductList.Select(P => P.ProductName);
+            //Result = from P in ListGenerator.ProductList
+            //         select P.ProductName;
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Customer Name
+            //var Result = ListGenerator.CustomerList.Select(P => P.CustomerName);
+            //Result = from P in ListGenerator.CustomerList
+            //         select P.CustomerName;
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Customer Orders
+            //var Result = ListGenerator.CustomerList.SelectMany(P => P.Orders);
+            //Result = from c in ListGenerator.CustomerList
+            //         from o in c.Orders
+            //         select o;
+
+
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Product Id and Product Name
+            //var Result = ListGenerator.ProductList
+            //    .Select(P => new { ProductID = P.ProductID, ProductName= P.ProductName});
+            //Result = from P in ListGenerator.ProductList
+            //         select new
+            //         {
+            //             ProductID = P.ProductID,
+            //             ProductName = P.ProductName
+            //         };
+
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Product in Stock and Apply Discount 10%
+            //var Result = ListGenerator.ProductList.Where(P => P.UnitsInStock > 0)
+            //    .Select(P => new 
+            //    { ID=P.ProductID, 
+            //        ProductName=P.ProductName, 
+            //        OldPrice=P.UnitPrice,
+            //        NewPrice=P.UnitPrice-(P.UnitPrice*0.1M)
+            //    });
+            ////Query syntax
+            //Result = from P in ListGenerator.ProductList
+            //         where P.UnitsInStock > 0
+            //         select new
+            //         {
+            //             ID = P.ProductID,
+            //             ProductName = P.ProductName,
+            //             OldPrice = P.UnitPrice,
+            //             NewPrice = P.UnitPrice - (P.UnitPrice * 0.1M)
+            //         };
+
+
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+    
             #endregion
         }
     }
