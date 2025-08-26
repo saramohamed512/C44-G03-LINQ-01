@@ -106,9 +106,41 @@ namespace LINQSession1
             //Casting , Aggregate , Elements Operators
             #endregion
             #region Data Setup
-            Console.WriteLine(ListGenerator.ProductList[0]);
-            Console.WriteLine(ListGenerator.CustomerList[0]);
+            //Console.WriteLine(ListGenerator.ProductList[0]);
+            //Console.WriteLine(ListGenerator.CustomerList[0]);
 
+            #endregion
+            #region Filteration Operators
+            //where operator
+            //deferred Exec
+            #region Get Elements Out of Stock
+            //var Result = ListGenerator.ProductList.Where(p => p.UnitsInStock == 0);
+            //Result= from P in ListGenerator.ProductList
+            //        where P.UnitsInStock == 0
+            //        select P;
+            //foreach (var Unit in Result) {
+            //    Console.WriteLine(Unit);
+            //}
+
+            #endregion
+            #region Get Products In Stock and In Category "meat"
+            //var Result = ListGenerator.ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Meat/Poultry");
+            //Result=from P in ListGenerator.ProductList
+            //       where P.UnitsInStock > 0 &&  P.Category == "Meat/Poultry"
+            //       select P;
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get from 10 products The products are out of stock
+            //indexes where
+            //var Result = ListGenerator.ProductList.Where((P, I) => I < 10 && P.UnitsInStock == 0);
+            //foreach (var Unit in Result)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
             #endregion
         }
     }
