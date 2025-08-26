@@ -81,6 +81,28 @@
 
             #endregion
             #endregion
+            #region LINQ Execution Ways
+            #region Deferred Execution
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var OddNums = Numbers.Where(N => N % 2 == 1);
+            //Numbers.AddRange(new int []{ 11,12,13,14,15});
+            //foreach (int n in OddNums)
+            //{
+            //    Console.WriteLine(n);
+            //}
+            #endregion
+            #region Immediate Execution
+
+            #endregion
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var OddNums = Numbers.Where(N => N % 2 == 1).ToList();
+            //Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
+            //foreach (int n in OddNums)
+            //{
+            //    Console.WriteLine(n);
+            //}
+            //Casting , Aggregate , Elements Operators
+            #endregion
         }
     }
 }
