@@ -142,6 +142,45 @@ namespace LINQSession1
             //}
             #endregion
             #endregion
+            #region Ordering Opertators
+            #region Get Products Ordered By Price Asc
+            ////Fluent
+            //var ResuLt = ListGenerator.ProductList.OrderBy(P => P.UnitPrice);
+            ////query
+            //ResuLt=from P in ListGenerator.ProductList
+            //       orderby P.UnitPrice
+            //       select P;
+            //foreach (var Unit in ResuLt)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Products Ordered By Price DESC
+            ////Fluent
+            //var ResuLt = ListGenerator.ProductList.OrderByDescending(P => P.UnitPrice);
+            ////query
+            //ResuLt = from P in ListGenerator.ProductList
+            //         orderby P.UnitPrice descending
+            //         select P;
+            //foreach (var Unit in ResuLt)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+            #region Get Products Ordered By Price Asc & number of items in stock
+            ////Fluent
+            //var ResuLt = ListGenerator.ProductList.OrderBy(P => P.UnitPrice).ThenBy(P=>P.UnitsInStock);
+            ////query
+            //ResuLt = from P in ListGenerator.ProductList
+            //         orderby P.UnitPrice, P.UnitsInStock
+            //         select P;
+            //foreach (var Unit in ResuLt)
+            //{
+            //    Console.WriteLine(Unit);
+            //}
+            #endregion
+
+            #endregion
         }
     }
 }
