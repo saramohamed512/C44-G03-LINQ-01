@@ -4,7 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Implicite Type Local Variable 
+            #region Var [Most recomended]
+            //var Name = "Sara";
+            ////var x = null; // invalid
+            //Name= null; // valid
+            ////var y; // invalid
+            #endregion
+            #region Dynamic
+            //dynamic Data = "Ali";
+            //Data = 5;
+            //Data= true;
+            //Data = 20.20;
+            //dynamic x;
+            //dynamic y=null;
+            //Console.WriteLine(Data);
+            #endregion
+
+            #endregion
         }
     }
 }
