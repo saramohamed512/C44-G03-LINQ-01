@@ -1,4 +1,5 @@
 ﻿using LINQSession1.Data;
+using System.Linq;
 
 namespace LINQSession1
 {
@@ -253,7 +254,39 @@ namespace LINQSession1
             //    Console.WriteLine(Unit);
             //}
             #endregion
-    
+
+            #endregion
+            #region Element Operators
+            //immediate execution
+            //first
+            //var Result = ListGenerator.ProductList.First();
+            //var Result = ListGenerator.ProductList.Last();
+
+            //var Result = ListGenerator.ProductList.FirstOrDefault();
+            //var Result = ListGenerator.ProductList.LastOrDefault(P=>P.UnitsInStock==0);
+
+
+            //************************************
+            //ElementAt() | ElementAtDefault()
+            //var Result = ListGenerator.ProductList.ElementAt(0);
+
+            //var Result = ListGenerator.ProductList.ElementAtOrDefault(0);
+            //single() | singleOrDefault()  (self_study)
+            //var Result = ListGenerator.ProductList.Single(p => p.ProductID == 1);
+            //var Result = ListGenerator.ProductList.SingleOrDefault(p => p.ProductID == 1);
+
+            //var Result = (from P in ListGenerator.ProductList
+            //             where P.UnitsInStock == 0
+            //             select new
+            //             {
+            //                 ID = P.ProductID,
+            //                 ProductName = P.ProductName,
+            //                 OldPrice = P.UnitPrice,
+            //                 NewPrice = P.UnitPrice - (P.UnitPrice * 0.1M)
+            //             }).FirstOrDefault();
+
+
+            //Console.WriteLine(Result);
             #endregion
         }
     }
