@@ -40,11 +40,18 @@
             //var Emp03= new { Id =Emp02.id,Name=Emp02.Name, Salary=4000};
             //Console.WriteLine(Emp03.GetType().Name);
             //var Emp04 = new { id = 10, Name = "sara", salary = 9000 };
-  
+
             //Console.WriteLine(Emp04.GetType().Name);
             //var Emp05 = new { id = 10, Name = "Mohamed", salary = 9000 , age=24};
 
             //Console.WriteLine(Emp05.GetType().Name);
+            #endregion
+            #region LINQ
+            List<int> Numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10};
+            List<int> OddNums = Numbers.Where(N  => N%2==1).ToList();
+            foreach (int n in OddNums) { 
+                Console.WriteLine(n);
+            }
             #endregion
         }
     }
