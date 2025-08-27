@@ -1,4 +1,6 @@
-﻿namespace LINQSession1Ass
+﻿using System.Threading;
+
+namespace LINQSession1Ass
 {
     internal class Program
     {
@@ -100,6 +102,78 @@
             #region 8. Get the average length of the words in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
             //double average = words.Average(w => w.Length);
             //Console.WriteLine($"Average word length: {average:F2}");
+            #endregion
+            #endregion
+            #region LINQ - Ordering Operators
+            #region 1. Sort a list of products by name
+            //var sortedProducts = ListGenerator.ProductsList.OrderBy(p => p.ProductName);
+            //foreach (var product in sortedProducts.Take(5))
+            //{
+            //    Console.WriteLine($"{product.ProductName}");
+            //}
+
+            #endregion
+            #region 2. Uses a custom comparer to do a case-insensitive sort of the words in an array.
+            //string[] words02 = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var caseInsensitiveSort = words02.OrderBy(w => w, StringComparer.OrdinalIgnoreCase);
+            //foreach (var word in caseInsensitiveSort)
+            //{
+            //    Console.WriteLine(word);
+            //}
+
+            #endregion
+            #region 3. Sort a list of products by units in stock from highest to lowest.
+            //var stockSorted = ListGenerator.ProductsList.OrderByDescending(p => p.UnitsInStock);
+            //foreach (var product in stockSorted.Take(5))
+            //{
+            //    Console.WriteLine($"{product.ProductName}: {product.UnitsInStock}");
+            //}
+
+            #endregion
+            #region 4. Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
+            //string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var sortedDigits = digits.OrderBy(d => d.Length).ThenBy(d => d);
+            //foreach (var digit in sortedDigits)
+            //{
+            //    Console.WriteLine(digit);
+            //}
+
+            #endregion
+            #region 5. Sort first by-word length and then by a case-insensitive sort of the words in an array.
+            //string[] words03 = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            //var wordSort = words03.OrderBy(w => w.Length).ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            //foreach (var word in wordSort)
+            //{
+            //    Console.WriteLine(word);
+            //}
+
+            #endregion
+            #region 6. Sort a list of products, first by category, and then by unit price, from highest to lowest.
+            //var categoryPriceSort = ListGenerator.ProductsList.OrderBy(p => p.Category).ThenByDescending(p => p.UnitPrice);
+            //foreach (var product in categoryPriceSort.Take(10))
+            //{
+            //    Console.WriteLine($"{product.Category} - {product.ProductName}: ${product.UnitPrice}");
+            //}
+
+            #endregion
+            #region 7. Sort first by-word length and then by a case-insensitive descending sort of the words in an array.
+            //var productNames = ListGenerator.ProductsList.Select(p => p.ProductName);
+            //foreach (var name in productNames.Take(5))
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            #endregion
+            #region 8. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+            //string[] words04 = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            //var caseVersions = words04.Select(w => new { Upper = w.ToUpper(), Lower = w.ToLower() });
+            //foreach (var version in caseVersions)
+            //{
+            //    Console.WriteLine($"   Upper: {version.Upper}, Lower: {version.Lower}");
+            //}
+
             #endregion
             #endregion
         }
