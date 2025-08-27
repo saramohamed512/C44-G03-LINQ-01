@@ -176,6 +176,74 @@ namespace LINQSession1Ass
 
             #endregion
             #endregion
+            #region LINQ – Transformation Operators
+            #region 1. Return a sequence of just the names of a list of products.
+            //var productProperties = ListGenerator.ProductsList.Select(p => new { p.ProductName, p.Category, Price = p.UnitPrice });
+            //foreach (var prop in productProperties.Take(5))
+            //{
+            //    Console.WriteLine($"{prop.ProductName}: {prop.Category}, ${prop.Price}");
+            //}
+
+            #endregion
+            #region 2. Produce a sequence of the uppercase and lowercase versions of each word in the original array (Anonymous Types).
+            //String[] words05 = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            //var wordQuery = from w in words05
+            //                select new
+            //                {
+            //                    Upper = w.ToUpper(),
+            //                    Lower = w.ToLower()
+            //                };
+
+            //foreach (var item in wordQuery)
+            //{
+            //    Console.WriteLine($"Uppercase: {item.Upper}, Lowercase: {item.Lower}");
+            //}
+
+            #endregion
+            #region 3. Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
+            //var productProperties = ListGenerator.ProductsList.Select(p => new { p.ProductName, p.Category, Price = p.UnitPrice });
+            //foreach (var prop in productProperties.Take(5))
+            //{
+            //    Console.WriteLine($"{prop.ProductName}: {prop.Category}, ${prop.Price}");
+            //}
+            #endregion
+            #region 4. Determine if the value of int in an array matches their position in the array.
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var matchingPosition = numbers.Select((n, index) => new { Number = n, Index = index, Matches = n == index });
+            //foreach (var item in matchingPosition)
+            //{
+            //    Console.WriteLine($"   Number {item.Number} at index {item.Index}: {item.Matches}");
+            //}
+            #endregion
+            #region 5. Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
+            //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //int[] numbersB = { 1, 3, 5, 7, 8 };
+            //var pairs = from a in numbersA
+            //            from b in numbersB
+            //            where a < b
+            //            select new { A = a, B = b };
+            //foreach (var pair in pairs)
+            //{
+            //    Console.WriteLine($"{pair.A} < {pair.B}");
+            //}
+
+            #endregion
+            #region 6. Select all orders where the order total is less than 500.00.
+            //var smallOrders = ListGenerator.CustomersList.SelectMany(c => c.Orders.Where(o => o.Total < 500.00M));
+            //foreach (var order in smallOrders.Take(5))
+            //{
+            //    Console.WriteLine($"   Order {order.OrderID}: ${order.Total}");
+            //}
+
+            #endregion
+            #region 7. Select all orders where the order was made in 1998 or later.
+            //var recentOrders = ListGenerator.CustomersList.SelectMany(c => c.Orders.Where(o => o.OrderDate.Year >= 1998));
+            //foreach (var order in recentOrders.Take(5))
+            //{
+            //    Console.WriteLine($"Order {order.OrderID}: {order.OrderDate:yyyy-MM-dd}");
+            //}
+            #endregion
+            #endregion
         }
     }
 }
